@@ -3,13 +3,13 @@
 A lightweight Java web application for tracking and analyzing personal expenses.
 
 ## Features
-- ➕ Add expenses with category, amount, date, and description
-- 📊 Doughnut chart of spending by category
-- 📈 Bar chart of monthly spending trend
-- 💰 Total expenses, entry count, highest & lowest category stats
-- 🗑️ Delete individual expense entries
-- 💾 Persistent CSV storage (survives restarts)
-- 🌱 Auto-seeded with 15 sample expenses on first run
+- Add expenses with category, amount, date, and description
+- Doughnut chart of spending by category
+- Bar chart of monthly spending trend
+- Total expenses, entry count, highest & lowest category stats
+- Delete individual expense entries
+- Persistent CSV storage (survives restarts)
+- Auto-seeded with 15 sample expenses on first run
 
 ## How to Run
 
