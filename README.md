@@ -39,22 +39,22 @@ The entire web UI is a single HTML page embedded inside the Java file. JavaScrip
 # Replace <your-jdk-folder> with your actual JDK folder name, e.g. jdk-25.0.3.9-hotspot
 $env:PATH = "C:\Users\$env:USERNAME\AppData\Local\Programs\Eclipse Adoptium\<your-jdk-folder>\bin;" + $env:PATH
 
-## Verify Java is working
+# Verify Java is working
 javac -version
 
-## 2. Navigate to the project folder
+# 2. Navigate to the project folder
 cd path\to\expense-tracker
 
-## 3. Create output directories (first time only)
+# 3. Create output directories (first time only)
 New-Item -ItemType Directory -Force -Path out\expense-tracker, data
 
-## 4. Compile
+# 4. Compile
 javac -d out\expense-tracker `
   src\main\java\com\expensetracker\Expense.java `
   src\main\java\com\expensetracker\ExpenseStore.java `
   src\main\java\com\expensetracker\ExpenseTrackerApp.java
 
-## 5. Run
+# 5. Run
 java -cp out\expense-tracker com.expensetracker.ExpenseTrackerApp
 ```
 
