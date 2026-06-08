@@ -32,9 +32,7 @@ The entire web UI is a single HTML page embedded inside the Java file. JavaScrip
 ### Prerequisites
 - Java JDK 25 or higher — [Download Eclipse Adoptium/Temurin here](https://adoptium.net)
 
----
-
-### Windows (PowerShell)
+### Steps
 
 ```powershell
 # 1. Add Java to your PATH (once per terminal session)
@@ -60,51 +58,16 @@ javac -d out\expense-tracker `
 java -cp out\expense-tracker com.expensetracker.ExpenseTrackerApp
 ```
 
-#### Finding Your JDK Folder Name (Windows)
-If you are unsure of your exact JDK folder name, run this to list what is installed:
-```powershell
-ls "C:\Users\$env:USERNAME\AppData\Local\Programs\Eclipse Adoptium"
-```
-Use the folder name shown to replace `<your-jdk-folder>` in step 1.
-
----
-
-### macOS (Terminal)
-
-```bash
-# 1. Install Java 25 via Homebrew (recommended)
-brew install --cask temurin@25
-
-# Verify Java is working
-javac -version
-
-# 2. Navigate to the project folder
-cd path/to/expense-tracker
-
-# 3. Create output directories (first time only)
-mkdir -p out/expense-tracker data
-
-# 4. Compile
-javac -d out/expense-tracker \
-  src/main/java/com/expensetracker/Expense.java \
-  src/main/java/com/expensetracker/ExpenseStore.java \
-  src/main/java/com/expensetracker/ExpenseTrackerApp.java
-
-# 5. Run
-java -cp out/expense-tracker com.expensetracker.ExpenseTrackerApp
-```
-
-#### Don't have Homebrew? (Mac)
-Install it first by running this in Terminal:
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
----
-
 Open your browser and go to: http://localhost:8080
 
 > On first run, 15 sample expenses are seeded automatically so the dashboard loads with data right away.
+
+### Finding Your JDK Folder Name
+If you are unsure of your exact JDK folder name, run this in PowerShell to list what is installed:
+```powershell
+ls "C:\Users\$env:USERNAME\AppData\Local\Programs\Eclipse Adoptium"
+```
+Use the folder name shown in the output to replace `<your-jdk-folder>` in step 1.
 
 ## API Endpoints
 
