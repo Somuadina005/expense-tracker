@@ -15,16 +15,16 @@ A lightweight Java web application for tracking and analyzing personal expenses.
 - Architecture
 The application is a single-process Java program using com.sun.net.httpserver — Java's built-in HTTP server. There is no Spring Boot, no Maven, no Gradle, and no external JARs. The entire app compiles and runs with one javac command.
 
-# Design Pattern
+## Design Pattern
 The app follows a clean 3-class architecture:
 Expense.java — Data model (what an expense looks like)
 ExpenseStore.java — Business logic and analytics (how data is stored and calculated)
 ExpenseTrackerApp.java — HTTP server, REST API, and the full web UI
 
-# Data Storage
+## Data Storage
 All data is stored in an ArrayList in memory while the app runs. Every time an expense is added or deleted, it is immediately written to a CSV file. On startup the app reads the file back so no data is lost between restarts. No database is needed.
 
-# Frontend
+## Frontend
 The entire web UI is a single HTML page embedded inside the Java file. JavaScript uses the Fetch API to call the REST endpoints and update the dashboard without page reloads. Chart.js renders the doughnut and bar charts.
 
 ## How to Run
