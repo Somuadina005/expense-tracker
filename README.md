@@ -12,7 +12,7 @@ A lightweight Java web application for tracking and analyzing personal expenses.
 - Auto-seeded with 15 sample expenses on first run
 
 # Approach & Design
-- Architecture
+## Architecture
 The application is a single-process Java program using com.sun.net.httpserver — Java's built-in HTTP server. There is no Spring Boot, no Maven, no Gradle, and no external JARs. The entire app compiles and runs with one javac command.
 
 ## Design Pattern
